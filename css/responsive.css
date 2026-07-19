@@ -1,0 +1,320 @@
+/* ============ RESPONSIVE DESIGN ============ */
+
+/* ============ TABLETS (768px and below) ============ */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 15px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+    font-size: 16px; /* Prevent iOS zoom */
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .category-filter {
+    gap: 8px;
+    padding: 0 15px;
+  }
+
+  .category-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  #quoteContainer {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 15px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .quote {
+    font-size: 16px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+
+  .loadBtn {
+    margin: 30px auto;
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 20px 15px;
+  }
+
+  .footer-nav {
+    gap: 15px;
+  }
+}
+
+/* ============ MOBILE PHONES (480px and below) ============ */
+@media (max-width: 480px) {
+  * {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 10px 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .category-filter {
+    gap: 6px;
+    padding: 0 10px;
+  }
+
+  .category-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  #quoteContainer {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .quote {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .quote-author {
+    font-size: 12px;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .buttons button {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .loadBtn {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  footer {
+    padding: 15px 10px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-nav a {
+    display: block;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
+
+  .menu {
+    width: auto;
+    justify-content: flex-end;
+  }
+
+  #darkBtn,
+  #favoritesBtn {
+    padding: 6px 12px;
+    font-size: 16px;
+  }
+}
+
+/* ============ LARGE SCREENS (1200px and above) ============ */
+@media (min-width: 1200px) {
+  #quoteContainer {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 40px;
+  }
+
+  .hero {
+    padding: 80px 40px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero p {
+    font-size: 24px;
+  }
+}
+
+/* ============ LANDSCAPE MODE ============ */
+@media (max-height: 600px) and (orientation: landscape) {
+  header {
+    padding: 8px 15px;
+  }
+
+  .hero {
+    padding: 20px 15px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .category-filter {
+    margin-top: 10px;
+    gap: 6px;
+  }
+
+  #quoteContainer {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .quote {
+    font-size: 14px;
+  }
+}
+
+/* ============ ACCESSIBILITY - PREFERS REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  button:hover {
+    transform: none;
+  }
+}
+
+/* ============ DARK MODE SUPPORT ============ */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  header {
+    background: #2d2d2d;
+  }
+
+  .search-box input {
+    background: #3d3d3d;
+    color: #e0e0e0;
+  }
+
+  .card {
+    background: #2d2d2d;
+    border-color: #3d3d3d;
+  }
+
+  .category-btn {
+    background: #2d2d2d;
+    color: #ff6b9d;
+    border-color: #ff6b9d;
+  }
+
+  footer {
+    background: #2d2d2d;
+    border-color: #3d3d3d;
+  }
+}
+
+/* ============ PRINT STYLES ============ */
+@media print {
+  header,
+  footer,
+  .loadBtn,
+  .buttons {
+    display: none;
+  }
+
+  .card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  body {
+    background: white;
+  }
+}
