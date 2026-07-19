@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff3366">
+<meta name="description" content="Beautiful romantic love messages and quotes for every occasion">
+
+<title>Love Messages ❤️</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/favicon.ico">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dark.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+❤️ Love Messages
+</div>
+
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Search Love Messages..."
+aria-label="Search love messages">
+</div>
+
+<div class="menu">
+<button id="darkBtn" aria-label="Toggle dark mode">🌙</button>
+<button id="favoritesBtn" aria-label="View favorites">⭐</button>
+</div>
+
+</header>
+
+<section class="hero">
+<h1>Beautiful Love Messages</h1>
+<p>Thousands of Romantic Quotes ❤️</p>
+<div class="category-filter">
+<button class="category-btn active" data-category="all">All</button>
+<button class="category-btn" data-category="Romantic">Romantic</button>
+<button class="category-btn" data-category="Good Morning">Good Morning</button>
+<button class="category-btn" data-category="Good Night">Good Night</button>
+<button class="category-btn" data-category="Anniversary">Anniversary</button>
+<button class="category-btn" data-category="Birthday">Birthday</button>
+</div>
+</section>
+
+<div id="quoteContainer"></div>
+
+<button class="loadBtn" id="loadMoreBtn">Load More</button>
+
+<footer>
+<nav class="footer-nav">
+<a href="pages/categories.html">Categories</a>
+<a href="pages/favorites.html">Favorites</a>
+<a href="pages/about.html">About</a>
+<a href="pages/premium.html">Premium</a>
+</nav>
+<p>&copy; 2024 Love Messages. Made with ❤️</p>
+</footer>
+
+<script src="quotes.js"></script>
+<script src="script.js" defer></script>
+<script src="js/search.js" defer></script>
+<script src="js/darkmode.js" defer></script>
+<script src="js/favorites.js" defer></script>
+<script src="js/share.js" defer></script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js').catch(err => console.log('SW registration failed'));
+  }
+</script>
+
+</body>
+</html>
